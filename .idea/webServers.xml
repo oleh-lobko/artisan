@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9fe35e52-7ff5-4644-84f8-690de90430c7" name="ready-for-feedback3.com:25566">
+        <fileTransfer rootFolder="/var/www/html" accessType="SFTP" host="ready-for-feedback3.com" port="25566" sshConfigId="b7ddca9c-4b6c-4a2c-a353-d6b486ceaf0a" sshConfig="leob0@ready-for-feedback3.com:25566 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
