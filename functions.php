@@ -211,6 +211,7 @@ function register_cpt_sponsor() {
         'supports'           => ['title'],
         'menu_icon'          => 'dashicons-groups',
         'exclude_from_search' => true,
+        'show_in_rest'       => false,
     ];
     register_post_type('sponsor', $args);
 }
