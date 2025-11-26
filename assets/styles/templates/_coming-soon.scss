@@ -1,0 +1,42 @@
+/* ========================================
+   Coming Soon Text Section
+   ======================================== */
+.coming-soon-section {
+  padding: 1rem 0;
+  text-align: center;
+  .coming-soon-header-wrap {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1.4rem;
+  }
+  .coming-soon-header-wrap h2 {
+    font-size: 3.2rem;
+  }
+
+  .section-header {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin: 0 auto 0rem auto;
+
+    /* КЛЮЧОВІ ЗМІНИ: Інтервал між літерами та шрифт */
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+    color: #333;
+
+    /* Додаткове вирівнювання: імітуємо вирівнювання по ширині */
+    display: inline-block;
+
+    /* Тут, імовірно, потрібен спеціальний шрифт */
+    font-family: 'Times New Roman', serif;
+  }
+
+  .body-content {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+}

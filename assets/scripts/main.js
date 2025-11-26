@@ -64,6 +64,7 @@ function resizeVideo() {
  * Scripts which runs after DOM load
  */
 $(document).on('ready', function () {
+  initHomeSlider();
   /**
    * Make elements equal height
    */
@@ -227,3 +228,16 @@ $(window).on('resize', function () {
 $(window).on('scroll', function () {
   // jQuery code goes here
 });
+/* === Ініціалізація Slick Slider для Hero-секції === */
+function initHomeSlider() {
+  $('.slider-wrapper').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    fade: true,
+    autoplay: true, // Вмикаємо автозапуск
+    autoplaySpeed: 4000, // 4 секунди
+    // adaptiveHeight: true, // Можна додати для адаптивності
+  });
+}

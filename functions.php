@@ -41,6 +41,8 @@ define('IMAGE_PLACEHOLDER', asset_path('images/placeholder.jpg'));
 /** ========================================================================
  * Included Functions.
  */
+// !!! ТИМЧАСОВО ЗАКОМЕНТОВАНО: Щоб уникнути WSOD через відсутність файлів/класів.
+/*
 spl_autoload_register(function ($class_name) {
     if (0 === strpos($class_name, 'theme\\')) {
         $class_name = str_replace('theme\\', '', $class_name);
@@ -73,7 +75,7 @@ array_map(function ($filename) {
     'tiny-mce-customizations',
     'posttypes',
     'rest',
-    //    'gutenberg-support', // !!!IMPORTANT Comment the "Disable gutenberg" filter to enable Gutenberg
+    //    'gutenberg-support',
     //    'woo-customizations',
     //    'divi-support',
     //    'elementor-support',
@@ -87,6 +89,8 @@ if (class_exists('theme\WlAcfGfField')) {
     // initialize
     new WlAcfGfField();
 }
+*/
+// !!! КІНЕЦЬ ТИМЧАСОВО ЗАКОМЕНТОВАНОГО БЛОКУ
 
 /** ========================================================================
  * Enqueue Scripts and Styles for Front-End.
@@ -132,6 +136,7 @@ add_action('wp_enqueue_scripts', function () {
  */
 
 // Dynamic Admin
+/*
 if (class_exists('theme\DynamicAdmin') && is_admin()) {
     $dynamic_admin = new DynamicAdmin();
     //    $dynamic_admin->addField('page', 'template', __('Page Template', 'fwp'), 'template_detail_field_for_page');
@@ -152,10 +157,48 @@ if (class_exists('theme\CreateLazyImg')) {
         });
     });
 }
+*/
 
 /** ========================================================================
  * PUT YOU FUNCTIONS BELOW.
  */
+function register_cpt_slider() {
+    $labels = [
+        'name'          => 'Slides',
+        'singular_name' => 'Slide',
+        'menu_name'     => 'Home Slider',
+        'all_items'     => 'All Slides',
+    ];
+    $args = [
+        'labels'             => $labels,
+        'public'             => false,
+        'has_archive'        => false,
+        'publicly_queryable' => false,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'menu_position'      => 20,
+        'supports'           => ['title', 'thumbnail', 'page-attributes'],
+        'menu_icon'          => 'dashicons-images-alt2',
+        'rewrite'            => false,
+    ];
+    register_post_type('slider', $args);
+}
+add_action('init', 'register_cpt_slider');
+add_action( 'after_setup_theme', 'slider_cpt_thumbnails_support' );
+function slider_cpt_thumbnails_support() {
+    add_post_type_support( 'slider', 'thumbnail' );
+}
+function artisan_register_menus() {
+    register_nav_menus(
+        array(
+            'header' => __( 'Головне меню (Header)', 'artisan' ),
+            'footer'  => __( 'Меню у футері', 'artisan' ),
+            '404'=> __('404'),
+        )
+    );
+}
+add_action( 'after_setup_theme', 'artisan_register_menus' );
+add_theme_support( 'custom-logo' );
 function register_cpt_home() {
     $labels = [
         'name'          => 'Homes',
