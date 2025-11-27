@@ -65,6 +65,7 @@ function resizeVideo() {
  */
 $(document).on('ready', function () {
   initHomeSlider();
+  initHomesSlider();
   /**
    * Make elements equal height
    */
@@ -239,5 +240,28 @@ function initHomeSlider() {
     autoplay: true, // Вмикаємо автозапуск
     autoplaySpeed: 4000, // 4 секунди
     // adaptiveHeight: true, // Можна додати для адаптивності
+  });
+}
+function initHomesSlider() {
+  $('.homes-slider-wrapper').slick({
+    slidesToShow: 3, // Показуємо 3 будинки
+    slidesToScroll: 1,
+    infinite: false, // Можна вимкнути, оскільки будинків 9
+    dots: false,
+    arrows: true, // Вмикаємо стрілки
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 }

@@ -1,0 +1,70 @@
+/* ========================================
+   Artisan Guide Section
+   ======================================== */
+.artisan-guide-section {
+  margin-top: 2rem;
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artisan-guide-section .guide-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px) brightness(0.9);
+  -webkit-filter: blur(5px) brightness(0.9);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+
+.artisan-guide-section .guide-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 20;
+
+  .poster-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px) brightness(1.2);
+    -webkit-backdrop-filter: blur(8px) brightness(1.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 30;
+  }
+
+  .guide-poster {
+    max-width: 200px;
+    height: auto;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    z-index: 30;
+  }
+
+  /* Кнопка */
+  .view-guide-btn {
+    background-color: $primarry-color;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 1.2rem 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    z-index: 50;
+  }
+}

@@ -5,9 +5,9 @@
 //$slick-prev-character: '\f104';
 //$slick-next-character: '\f105';
 //$slick-dot-character: '\f111';
-$slick-arrow-color: $white;
-$slick-dot-color: $primary-color;
-$slick-dot-color-active: $primary-color;
+$slick-arrow-color: $primarry-color;
+$slick-dot-color: $primarry-color;
+$slick-dot-color-active: $primarry-color;
 $slick-dot-size: 1rem;
 $slick-arrow-size: 2rem;
 
@@ -19,18 +19,24 @@ $slick-arrow-size: 2rem;
   width: calc($slick-arrow-size / 2);
   height: $slick-arrow-size;
   z-index: 1;
+  background: none;
+  color: $slick-arrow-color;
+  margin: 0 -3%;
 
   &::before {
     font-weight: 900;
     font-size: $slick-arrow-size;
+    color: $slick-arrow-color;
+    line-height: $slick-arrow-size;
+    margin: 0 -40%;
   }
 }
 .slick-prev {
-  left: 2rem;
+  left: 0.4rem;
 }
 
 .slick-next {
-  right: 2rem;
+  right: 0.4rem;
 }
 
 /* Dots */

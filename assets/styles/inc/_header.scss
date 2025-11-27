@@ -193,14 +193,15 @@
     }
   }
 }
-.flex-container{
+.flex-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .site-header {
   background-color: $header-bg;
   color: $header-text-color;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .site-logo {

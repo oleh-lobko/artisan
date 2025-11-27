@@ -1,0 +1,80 @@
+/* ========================================
+   Our Homes (Slider) Section
+   ======================================== */
+.our-homes-section {
+  padding: 1rem 0;
+  text-align: center;
+
+  .section-title {
+    color: $section-title-color;
+    font-family: Arial, sans-serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    border-bottom: 4px solid $section-title-color;
+    max-width: 350px;
+    margin-bottom: 2rem;
+  }
+  .homes-slider-wrapper {
+    display: flex;
+    gap: 1rem;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  .slick-slide {
+    margin: 0 -20px;
+  }
+  .home-slide-item {
+    margin: 0 auto;
+  }
+  .home-photo-wrap {
+    padding: 2px;
+    height: 190px;
+  }
+  .home-card {
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid $home-bg;
+    max-width: 300px;
+    margin: 0 auto;
+    .home-info {
+      padding: 1rem;
+      .home-address,
+      .home-city-zip {
+        text-transform: uppercase;
+        color: $home-bg;
+        font-weight: 600;
+        margin-bottom: 0.1rem;
+        line-height: 1.2;
+      }
+      .builder-name {
+        color: $name-color;
+      }
+    }
+
+    .artisan-number-btn {
+      display: block;
+      background-color: $home-bg;
+      color: $color-white;
+      padding: 1rem 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: -1px;
+    }
+  }
+
+  .view-homes-btn {
+    background-color: $home-bg;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 1.2rem 3rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 3rem;
+  }
+}

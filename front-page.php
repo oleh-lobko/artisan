@@ -12,6 +12,9 @@ get_header();
 <?php
 get_template_part('parts/home', 'top-slider');
 get_template_part('parts/home', 'coming-soon');
+get_template_part('parts/home', 'builders-team');
+get_template_part('parts/home', 'homes-slider');
+get_template_part('parts/home', 'artisan-guide');
 ?>
 
 
