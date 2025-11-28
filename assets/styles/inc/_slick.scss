@@ -1,10 +1,3 @@
-/* Slick slider default styles */
-
-// Override slick variables (to use default slick styles just remove variables below)
-//$slick-font-family: '';
-//$slick-prev-character: '\f104';
-//$slick-next-character: '\f105';
-//$slick-dot-character: '\f111';
 $slick-arrow-color: $primarry-color;
 $slick-dot-color: $primarry-color;
 $slick-dot-color-active: $primarry-color;
@@ -14,32 +7,23 @@ $slick-arrow-size: 2rem;
 @import '~slick-carousel/slick/slick.scss';
 @import '~slick-carousel/slick/slick-theme.scss';
 
-/* Arrows */
-.slick-arrow {
-  width: calc($slick-arrow-size / 2);
-  height: $slick-arrow-size;
-  z-index: 1;
-  background: none;
+.slick-arrow::before {
+  font-family: 'Font Awesome', 'Font Awesome', sans-serif !important;
   color: $slick-arrow-color;
-  margin: 0 -3%;
-
-  &::before {
-    font-weight: 900;
-    font-size: $slick-arrow-size;
-    color: $slick-arrow-color;
-    line-height: $slick-arrow-size;
-    margin: 0 -40%;
-  }
-}
-.slick-prev {
-  left: 0.4rem;
+  font-size: $slick-arrow-size;
+  line-height: $slick-arrow-size;
+  opacity: 1;
+  font-weight: 900;
 }
 
-.slick-next {
-  right: 0.4rem;
+.slick-prev::before {
+  content: '\f053';
 }
 
-/* Dots */
+.slick-next::before {
+  content: '\f054';
+}
+
 .slick-dotted.slick-slider {
   margin-bottom: 3rem;
 }

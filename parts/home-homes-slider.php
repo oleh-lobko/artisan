@@ -19,7 +19,6 @@ if ($homes_query->have_posts()) :
     ?>
     <section class="our-homes-section section-padding">
         <div class="grid-container">
-
             <?php if ($section_title) : ?>
                 <h2 class="section-title text-center"><?php echo esc_html($section_title); ?></h2>
             <?php endif; ?>
@@ -72,7 +71,6 @@ if ($homes_query->have_posts()) :
                     <?php _e('View Homes', 'artisan'); ?>
                 </a>
             <?php endif; ?>
-
         </div>
     </section>
 <?php endif; ?>

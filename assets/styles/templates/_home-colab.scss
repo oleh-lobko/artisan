@@ -1,0 +1,41 @@
+/* ========================================
+   Collaborations Section
+   ======================================== */
+
+$section-title-color: #9c6c39;
+
+.collaborations-section {
+  padding: 1rem 0;
+  .sponsors-block,
+  .partners-block {
+    margin-bottom: 2rem;
+  }
+  .section-title {
+    color: $section-title-color;
+    font-family: Arial, sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    border-bottom: 2.5px solid $section-title-color;
+    max-width: 350px;
+  }
+
+  .logo-list {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-item {
+    padding: 0 20px;
+
+    img {
+      max-width: 150px;
+      height: auto;
+      max-height: 80px;
+      object-fit: contain;
+    }
+  }
+}

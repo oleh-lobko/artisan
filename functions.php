@@ -119,6 +119,12 @@ add_action('wp_enqueue_scripts', function () {
             null,
             true
         );
+        wp_enqueue_style(
+            'vendor-styles',
+            asset_path('styles/main.css'),
+            [],
+            null
+        );
 
         wp_localize_script(
             'main.js',
@@ -162,6 +168,15 @@ if (class_exists('theme\CreateLazyImg')) {
 /** ========================================================================
  * PUT YOU FUNCTIONS BELOW.
  */
+if(function_exists('acf_add_options_page')) {
+    acf_add_options_page([
+        'page_title' => 'Theme General Settings',
+        'menu_title' => 'Theme Settings',
+        'menu_slug' => 'theme-general-settings',
+        'capability' => 'edit_posts',
+        'redirect' => false
+    ]);
+}
 function register_cpt_slider() {
     $labels = [
         'name'          => 'Slides',

@@ -24,8 +24,6 @@ h1,
   font-family: Arial, sans-serif;
   font-size: 3rem;
   margin-bottom: 0.2em;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 h2,
 .h2 {
@@ -78,13 +76,13 @@ address {
 }
 
 a {
-  color: $primary-color;
+  color: $primarry-color;
   transition: all 0.2s ease-in-out;
 
   &:hover,
   &:focus {
     /* basic hover and focus effects */
-    color: darken($primary-color, 20);
+    color: darken($primarry-color, 20);
   }
 }
 
@@ -197,7 +195,6 @@ input[type='button'] {
   //&:focus {
   //}
 }
-
 /* Button additional styles */
 
 .button {

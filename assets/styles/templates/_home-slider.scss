@@ -8,18 +8,18 @@
   .section-title {
     color: $section-title-color;
     font-family: Arial, sans-serif;
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
-    border-bottom: 4px solid $section-title-color;
+    border-bottom: 2.5px solid $section-title-color;
     max-width: 350px;
     margin-bottom: 2rem;
   }
   .homes-slider-wrapper {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     margin-left: 8%;
     margin-right: 8%;
   }
@@ -27,7 +27,7 @@
     margin: 0 -20px;
   }
   .home-slide-item {
-    margin: 0 auto;
+    text-align: center;
   }
   .home-photo-wrap {
     padding: 2px;
@@ -37,8 +37,7 @@
     display: flex;
     flex-direction: column;
     border: 1.5px solid $home-bg;
-    max-width: 300px;
-    margin: 0 auto;
+    margin: 1rem 2rem;
     .home-info {
       padding: 1rem;
       .home-address,

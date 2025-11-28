@@ -1,36 +1,110 @@
-.footer {
-  margin-top: auto;
-}
+/* ========================================
+   Footer Section (_footer.scss)
+   ======================================== */
+.site-footer {
+  background-color: $footer-bg;
+  color: $footer-text;
+  padding: 3rem 0;
+  font-size: 0.9rem;
 
-.footer__logo {
-  img {
-    max-height: 120px;
+  .grid-container {
+    text-align: center;
   }
-}
 
-.footer__sp {
-  text-align: right;
-}
-
-.footer-menu {
-  @include list-unstyled;
-
-  text-align: center;
-
-  li {
-    display: inline-block;
-
+  .footer-contact-info {
+    margin-bottom: 1rem;
     a {
-      display: block;
-      padding: 5px 10px;
+      color: $link-color;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-}
 
-.footer__copy {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: $light-gray;
-  font-size: 12px;
-  text-align: center;
+  .footer-address {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-contact-links {
+    a {
+      color: $link-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .footer-contact-links {
+      color: $footer-text;
+    }
+  }
+
+  .footer-social-links {
+    margin: 1.5rem auto;
+
+    .social-icon-link {
+      display: inline-block;
+      margin: 0 0.5rem;
+      border: 1px solid $footer-text;
+      padding: 5px;
+      color: $footer-text;
+      transition: all 0.3s;
+
+      &:hover {
+        border-color: $link-color;
+      }
+      i.fa {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .stay-link {
+  }
+  .stay-tuned {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 1rem;
+  }
+  /* Логотип Footer */
+  .footer-logo {
+    margin-bottom: 1.5rem;
+
+    .footer-logo-img {
+      max-height: 80px;
+      width: auto;
+    }
+  }
+
+  .footer-copyright {
+    margin-top: 1.5rem;
+  }
+}
+.stay-tuned {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-links;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    svg {
+      width: 20px;
+      height: 20px;
+
+      path {
+        fill: $color-links;
+      }
+    }
+    &:hover {
+      color: $color-links-lv;
+    }
+  }
 }

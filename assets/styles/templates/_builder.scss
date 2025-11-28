@@ -8,13 +8,12 @@
   .section-title {
     color: $section-title-color;
     font-family: Arial, sans-serif;
-    font-size: 2.8rem;
-    margin-bottom: 0.2em;
+    font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
-    border-bottom: 4px solid $section-title-color;
+    border-bottom: 2.5px solid $section-title-color;
     max-width: 350px;
     margin-bottom: 2rem;
   }

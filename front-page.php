@@ -15,6 +15,7 @@ get_template_part('parts/home', 'coming-soon');
 get_template_part('parts/home', 'builders-team');
 get_template_part('parts/home', 'homes-slider');
 get_template_part('parts/home', 'artisan-guide');
+get_template_part('parts/home', 'collaborations');
 ?>
 
 

@@ -66,6 +66,7 @@ function resizeVideo() {
 $(document).on('ready', function () {
   initHomeSlider();
   initHomesSlider();
+  initHomeFilter();
   /**
    * Make elements equal height
    */
@@ -237,18 +238,18 @@ function initHomeSlider() {
     arrows: false,
     dots: false,
     fade: true,
-    autoplay: true, // Вмикаємо автозапуск
-    autoplaySpeed: 4000, // 4 секунди
-    // adaptiveHeight: true, // Можна додати для адаптивності
+    autoplay: true,
+    autoplaySpeed: 4000,
+    // adaptiveHeight: true,
   });
 }
 function initHomesSlider() {
   $('.homes-slider-wrapper').slick({
-    slidesToShow: 3, // Показуємо 3 будинки
+    slidesToShow: 3,
     slidesToScroll: 1,
-    infinite: false, // Можна вимкнути, оскільки будинків 9
+    infinite: false,
     dots: false,
-    arrows: true, // Вмикаємо стрілки
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -263,5 +264,21 @@ function initHomesSlider() {
         },
       },
     ],
+  });
+}
+function initHomeFilter() {
+  const $filter = $('#company-filter');
+  const $grid = $('.home-listings-grid');
+  const $cards = $grid.find('.home-listing-card');
+
+  $filter.on('change', function () {
+    const filterValue = $(this).val();
+
+    if (filterValue === '') {
+      $cards.show();
+    } else {
+      $cards.hide();
+      $cards.filter('[data-filter="' + filterValue + '"]').show();
+    }
   });
 }
