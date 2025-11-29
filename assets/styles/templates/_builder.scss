@@ -3,19 +3,21 @@
    ======================================== */
 
 .builders-team-section {
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   text-align: center;
   .section-title {
     color: $section-title-color;
     font-family: Arial, sans-serif;
-    font-size: 1.8rem;
+    font-size: 2.125rem;
+    line-height: 1.8125rem;
+    padding: 9px;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
-    border-bottom: 2.5px solid $section-title-color;
+    border-bottom: 1.5px solid $section-title-color;
     max-width: 350px;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   .builders-content {
@@ -25,9 +27,8 @@
     margin-right: 10%;
   }
 
-  /* Блок 1: Фото */
   .builder-photo-col {
-    padding: 0; /* Прибираємо внутрішні відступи, щоб фото було впритул */
+    padding: 0;
 
     .group-photo {
       display: block;
@@ -37,7 +38,6 @@
     }
   }
 
-  /* Блок 2: Список */
   .builder-list-col {
     padding: 0;
     background-color: $builders-bg;
@@ -53,26 +53,23 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        font-size: 1.1rem;
-        line-height: 1.6;
+        font-size: 1rem;
+        line-height: 1.6875rem;
 
         .builder-item {
           margin-bottom: 0.8rem;
           margin-top: 0.8rem;
           font-size: 0.8rem;
 
-          /* Імена (Chris Ragland) - Нежирний */
           .builder-name {
             font-weight: 300;
             color: $builders-text-color;
           }
 
-          /* Опис (Homes by Chris) - Жирний (BOLD) */
           .builder-description {
             font-weight: 700;
             color: $builders-text-color;
 
-            /* Додаємо пробіл перед комою, оскільки в PHP-коді є кома*/
             &:before {
               content: '';
             }

@@ -4,7 +4,7 @@
 .artisan-guide-section {
   margin-top: 2rem;
   position: relative;
-  min-height: 400px;
+  min-height: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,11 +60,13 @@
     background-color: $primarry-color;
     color: $color-white;
     text-transform: uppercase;
-    font-size: 1.2rem;
-    padding: 1.2rem 1.2rem;
+    font-size: 1.4375rem;
+    line-height: 2.4375rem;
+    padding: 1rem 1.2rem;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
+    max-height: 4.375rem;
     z-index: 50;
   }
 }
