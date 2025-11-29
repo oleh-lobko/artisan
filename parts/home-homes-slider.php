@@ -38,7 +38,6 @@ if ($homes_query->have_posts()) :
 
                             <div class="home-photo-wrap">
                                 <?php if ($home_photo) :
-                                    // Виведення зображення будинку
                                     echo wp_get_attachment_image($home_photo['id'], 'large', false, ['class' => 'home-photo']);
                                 endif; ?>
                             </div>
