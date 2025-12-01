@@ -1,9 +1,17 @@
+// Змінні кольорів (підібрані з картинки)
+$bg-dark-gray: #4d4d4d;
+$border: #352003;
+$text-white: #ffffff;
+$border-gray: #7a7a7a; // Колір лінії під заголовком
+$gold-accent: #c49a58; // Золотистий колір рамки селекта
+$text-brown: #8f703e; // Колір тексту всередині селекта
 .filter-header-wrap {
   background-color: $bg-dark-gray;
   border-top: 2px solid $border;
   padding: 20px 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; // Або ваш шрифт сайту
 
+  // Вирівнювання контейнера (якщо grid-container не має власних стилів)
   .grid-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -16,28 +24,35 @@
     justify-content: center;
     gap: 0rem;
     flex-wrap: wrap;
+
+    // Якщо потрібно, щоб контент був по центру, як на картинці, розкоментуйте:
+    // justify-content: center;
   }
 
+  // Стилі заголовка "ARTISAN HOMES"
   .section-title {
     color: $text-white;
     font-size: 28px;
     font-weight: 700;
     text-transform: uppercase;
-    padding-bottom: 9px;
-    border-bottom: 1.5px solid $text-white;
+    margin: 0;
+    padding-bottom: 2px;
+    border-bottom: 2px solid $text-white;
     line-height: 1.2;
+    margin-right: 10px;
     padding-right: 5px;
     padding-left: 5px;
   }
 
+  // Стилі лейблу "FILTER BY COMPANY"
   label {
     color: $text-white;
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
-    margin-right: 10px;
-    white-space: nowrap;
+    margin-right: 10px; // Відступ до селекта
+    white-space: nowrap; // Щоб текст не переносився
   }
 
   .company-filter-select {
@@ -53,6 +68,7 @@
     border-radius: 0;
     outline: none;
 
+    // Налаштування тексту всередині option
     option {
       color: #333;
     }
@@ -90,15 +106,12 @@
     .home-city-zip {
       text-transform: uppercase;
       color: $home-bg;
-      font-size: 1.0875rem;
       font-weight: 600;
       margin-bottom: 0.1rem;
       line-height: 1.2;
     }
     .builder-name {
       color: $name-color;
-      font-size: 1.0625rem;
-      line-height: 1.4375rem;
     }
   }
 
@@ -107,8 +120,6 @@
     background-color: $home-bg;
     color: $color-white;
     padding: 1rem 0;
-    font-size: 0.875rem;
-    line-height: 2rem;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;

@@ -2,8 +2,8 @@
 /**
  * Coming Soon Text Section (Використовує актуальні імена полів ACF)
  */
-$header = get_field('coming_soon_title'); // З ACF Home Page General Fields
-$body_text = get_field('home_cs_content');  // З ACF Home Page General Fields
+$header = get_field('coming_soon_title');
+$body_text = get_field('home_cs_content');
 
 if ($header || $body_text) :
     ?>

@@ -29,8 +29,8 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="grid-container ">
-        <div class="home-listings-grid grid-x grid-margin-x filterable-grid photo">
+        <div class="grid-container">
+        <div class="home-listings-grid grid-x grid-margin-x filterable-grid">
                 <?php
                 // Loop, який відображає всі будинки
                 if (have_posts()) :

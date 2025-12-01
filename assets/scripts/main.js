@@ -240,7 +240,7 @@ function initHomeSlider() {
     fade: true,
     autoplay: true,
     autoplaySpeed: 4000,
-    // adaptiveHeight: true,
+    infinite: true,
   });
 }
 function initHomesSlider() {

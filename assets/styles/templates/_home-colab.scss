@@ -41,3 +41,10 @@ $section-title-color: #9c6c39;
     }
   }
 }
+@include breakpoint(small down) {
+  .logo-list {
+    .logo-item {
+      margin-bottom: 10px;
+    }
+  }
+}

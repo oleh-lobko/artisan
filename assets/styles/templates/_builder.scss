@@ -3,7 +3,7 @@
    ======================================== */
 
 .builders-team-section {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   text-align: center;
   .section-title {
     color: $section-title-color;
@@ -75,6 +75,16 @@
             }
           }
         }
+      }
+    }
+  }
+}
+@include breakpoint(small down) {
+  .builder-list-col {
+    .builder-list-wrapper {
+      .builder-item {
+        margin-bottom: 0.6rem;
+        margin-top: 0.6rem;
       }
     }
   }

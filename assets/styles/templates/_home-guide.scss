@@ -46,6 +46,7 @@
     -webkit-backdrop-filter: blur(8px) brightness(1.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     z-index: 30;
+    max-width: 100%;
   }
 
   .guide-poster {
@@ -68,5 +69,17 @@
     display: inline-block;
     max-height: 4.375rem;
     z-index: 50;
+  }
+}
+@include breakpoint(small down) {
+  .artisan-guide-section {
+    .guide-content {
+      .view-guide-btn {
+        font-size: 1rem;
+        line-height: 2.4375rem;
+        padding: 0.5rem 0.6rem;
+        min-width: 200px;
+      }
+    }
   }
 }

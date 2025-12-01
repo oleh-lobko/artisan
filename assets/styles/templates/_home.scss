@@ -17,17 +17,25 @@
     width: 150%;
     height: auto;
   }
-
-  /* Контейнер для накладеної графіки ARTISAN та дати */
+  @include breakpoint(small down) {
+    .single-slide {
+      .hero-overlay-content {
+        .hero-artisan-text {
+          margin-left: -2rem;
+        }
+      }
+    }
+  }
   .hero-overlay-content {
     position: absolute;
     margin-bottom: -2.8%;
     bottom: 0;
     left: 15%;
     z-index: 10;
+
     .hero-artisan-text {
-      margin: 0 auto 10px;
       display: block;
+      margin-left: -3rem;
       opacity: 0.8;
     }
   }

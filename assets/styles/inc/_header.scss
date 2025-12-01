@@ -14,7 +14,16 @@
 
 @include breakpoint(small down) {
   /* TOP BAR Mobile STYLING */
-
+  .site-header {
+    position: relative;
+    z-index: 99;
+  }
+  .top-bar {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+  }
   .menu-grid-container {
     padding-left: 0;
     padding-right: 0;
@@ -31,17 +40,20 @@
     }
   }
 
-  //.title-bar {
-  //  line-height: 45px;
-  //
-  //  .menu-icon {
-  //    padding: 0;
-  //    border: none;
-  //    background-color: transparent;
-  //
-  //    //@include menu-icon($white, $white, 30px, 24px, 3px);
-  //  }
-  //}
+  .title-bar {
+    line-height: 45px;
+
+    .menu-icon {
+      padding: 0;
+      border: none;
+      background-color: transparent;
+
+      @include menu-icon($white, $white, 30px, 24px, 3px);
+      &:after {
+        display: none;
+      }
+    }
+  }
 
   .top-bar {
     display: none;
@@ -53,7 +65,7 @@
 
     li {
       > a {
-        background: $primary-color; /* menu item background color */
+        background: $primarry-color; /* menu item background color */
         color: $white; /* menu item text color */
         line-height: 45px;
 
@@ -61,7 +73,7 @@
           &,
           & + .submenu-toggle {
             background: darken(
-              $primary-color,
+              $primarry-color,
               5
             ); /* menu item background color on hover */
           }
@@ -74,7 +86,7 @@
         > a,
         .submenu-toggle {
           background: lighten(
-            $primary-color,
+            $primarry-color,
             5
           ); /* current/parent menu item background color */
         }
@@ -84,7 +96,7 @@
         > a,
         .submenu-toggle {
           background: darken(
-            $primary-color,
+            $primarry-color,
             3
           ); /* menu item background color on open dropdown */
         }
@@ -111,11 +123,13 @@
 
 @include breakpoint(medium) {
   /* TOP BAR STYLING */
-
-  .header-menu.menu {
+  .top-bar {
+    height: 100%;
+  }
+  .main-menu.menu {
     /* Align menu items to the right */
-    // justify-content: flex-end;
-
+    justify-content: flex-end;
+    height: 100%;
     /* Align menu items to the center */
     // justify-content: center;
 
@@ -123,11 +137,12 @@
       > a {
         /* Regular menu item style */
         line-height: 40px;
-        color: $primary-color;
+        color: $primarry-color;
+        padding: 0.7rem 0.5rem;
 
         &:hover {
           /* menu item style on hover */
-          background: $primary-color;
+          background: $primarry-color;
           color: $white;
         }
       }
@@ -137,7 +152,7 @@
       &.current_page_parent {
         > a {
           /* Style of Current page and Ancestor page */
-          background: $primary-color;
+          background: $primarry-color;
           color: $white;
         }
       }
@@ -151,10 +166,19 @@
       &.is-active > a {
         /* Parent link style on dropdown hover */
         background: $white;
-        color: $primary-color;
+        color: $primarry-color;
       }
     }
-
+    .site-menu {
+      .main-menu {
+        li {
+          &:not(:last-child):after {
+            content: '';
+            color: $header-text-color;
+          }
+        }
+      }
+    }
     /* Dropdown item styling */
 
     .submenu {
@@ -169,12 +193,12 @@
         > a {
           /* Regular link in dropdown */
           background: $white;
-          color: $primary-color;
+          color: $primarry-color;
           line-height: 30px;
 
           &:hover {
             /* Dropdown link on hover */
-            background: lighten($primary-color, 10);
+            background: lighten($primarry-color, 10);
             color: $white;
           }
         }
@@ -183,7 +207,7 @@
         &.current_page_ancestor,
         &.current_page_parent {
           > a {
-            background: lighten($primary-color, 10);
+            background: lighten($primarry-color, 10);
             color: $white;
           }
         }
@@ -201,7 +225,7 @@
 .site-header {
   background-color: $header-bg;
   color: $header-text-color;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .site-logo {
@@ -244,7 +268,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    max-width: 740px;
+    //max-width: 740px;
     display: flex;
     align-items: center;
 
@@ -256,7 +280,7 @@
         display: inline;
         color: $header-text-color;
         text-transform: uppercase;
-        font-size: 17px;
+        font-size: 18px;
         line-height: 20px;
         font-weight: 400;
         text-decoration: none;
@@ -265,7 +289,7 @@
 
       &:not(:last-child):after {
         content: ' / ';
-        color: $header-text-color; /* ВИПРАВЛЕНО: Додано крапку з комою */
+        color: $header-text-color;
       }
     }
   }
