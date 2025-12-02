@@ -2,20 +2,19 @@
    Coming Soon Text Section
    ======================================== */
 .coming-soon-section {
-  padding: 2.5rem 0;
+  padding-top: 2.6rem;
+  padding-bottom: 0;
   text-align: center;
   .coming-soon-header-wrap {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 1.875rem;
-    letter-spacing: 2.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .section-header {
     font-size: 2rem;
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: 0.65rem;
+    letter-spacing: 1rem;
+    margin-top: -1rem;
     max-width: 60rem;
     font-weight: 300;
     color: $color-coming-soon;
@@ -27,12 +26,10 @@
 
   .body-content {
     font-family: 'Segoe UI';
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2.4rem;
     color: $color-coming-soon;
     text-align: center;
-    max-width: 60rem;
     font-weight: 300;
-    margin: 0 auto;
   }
 }

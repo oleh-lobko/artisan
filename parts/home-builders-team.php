@@ -18,7 +18,7 @@ if ($section_title || $group_photo || $has_builders) :
 
             <div class="builders-content grid-x">
 
-                <div class="cell medium-6 builder-photo-col">
+                <div class="cell medium-6 grid-margin-x builder-photo-col">
                     <?php if ($group_photo) :
                         echo wp_get_attachment_image($group_photo['id'], 'medium_large', false, ['class' => 'group-photo']);
                     endif; ?>

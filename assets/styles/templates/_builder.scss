@@ -3,7 +3,7 @@
    ======================================== */
 
 .builders-team-section {
-  padding: 2rem 0;
+  padding-top: 3.6rem;
   text-align: center;
   .section-title {
     color: $section-title-color;
@@ -17,16 +17,12 @@
     display: inline-block;
     border-bottom: 1.5px solid $section-title-color;
     max-width: 350px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 25px;
   }
-
   .builders-content {
-    align-items: stretch;
-    justify-content: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 1rem;
   }
-
   .builder-photo-col {
     padding: 0;
 
@@ -39,7 +35,7 @@
   }
 
   .builder-list-col {
-    padding: 0;
+    padding: 12px;
     background-color: $builders-bg;
     color: $builders-text-color;
     max-height: 417px;
@@ -47,7 +43,7 @@
     .builder-list-wrapper {
       display: flex;
       align-items: center;
-      margin-left: 2rem;
+      margin-left: 1rem;
       .builders-list {
         text-align: left;
         list-style: none;
@@ -57,9 +53,7 @@
         line-height: 1.6875rem;
 
         .builder-item {
-          margin-bottom: 0.8rem;
-          margin-top: 0.8rem;
-          font-size: 0.8rem;
+          margin-top: 0.1rem;
 
           .builder-name {
             font-weight: 300;

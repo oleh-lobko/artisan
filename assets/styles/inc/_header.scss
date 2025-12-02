@@ -14,6 +14,16 @@
 
 @include breakpoint(small down) {
   /* TOP BAR Mobile STYLING */
+  .site-menu {
+    .main-menu {
+      li {
+        background-color: $primarry-color;
+        &:not(:last-child):after {
+          display: none;
+        }
+      }
+    }
+  }
   .site-header {
     position: relative;
     z-index: 99;

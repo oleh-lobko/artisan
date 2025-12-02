@@ -2,7 +2,7 @@
    Our Homes (Slider) Section
    ======================================== */
 .our-homes-section {
-  padding-bottom: 3.5rem;
+  padding-bottom: 2.5rem;
   text-align: center;
 
   .section-title {
@@ -17,15 +17,15 @@
     display: inline-block;
     border-bottom: 1.5px solid $section-title-color;
     max-width: 350px;
+    margin-top: 3.3rem;
+    margin-bottom: 0.3rem;
   }
   .homes-slider-wrapper {
     display: flex;
-    gap: 2rem;
-    margin-left: 8%;
-    margin-right: 8%;
   }
   .slick-slide {
     margin: 0 -20px;
+    min-width: 320px;
   }
   .home-slide-item {
     text-align: center;
@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     border: 1.5px solid $home-bg;
-    margin: 1rem 2rem;
+    margin: 1rem 1.5rem;
     .home-info {
       padding: 1rem;
       .home-address,
@@ -61,13 +61,13 @@
       display: block;
       background-color: $home-bg;
       color: $color-white;
-      padding: 1rem 0;
+      padding: 0.4rem 0;
       font-size: 0.875rem;
       line-height: 2rem;
       text-decoration: none;
       text-transform: uppercase;
       font-weight: bold;
-      margin-top: -1px;
+      margin-top: 6px;
     }
   }
 

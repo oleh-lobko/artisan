@@ -10,7 +10,7 @@ if ($header || $body_text) :
     <section class="coming-soon-section section-padding text-center">
     <div class="grid-container ">
         <div class="grid-x grid-margin-x align-center">
-            <div class="cell large-10 large-offset-1">
+            <div class="cell large-12 ">
 
                 <?php if ($header) : ?>
                     <div class="coming-soon-header-wrap">
