@@ -72,6 +72,9 @@
     display: inline-block;
     max-height: 4.375rem;
     z-index: 50;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 @include breakpoint(small down) {

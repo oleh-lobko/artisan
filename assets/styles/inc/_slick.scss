@@ -7,6 +7,14 @@ $slick-arrow-size: 2rem;
 @import '~slick-carousel/slick/slick.scss';
 @import '~slick-carousel/slick/slick-theme.scss';
 
+.slick-arrow {
+  &:hover {
+    &:before {
+      color: $color-prime-lov;
+      opacity: 0.6;
+    }
+  }
+}
 .slick-arrow::before {
   font-family: 'Font Awesome', 'Font Awesome', sans-serif !important;
   color: $slick-arrow-color;
@@ -37,5 +45,18 @@ $slick-arrow-size: 2rem;
         font-weight: 900;
       }
     }
+  }
+}
+@include breakpoint(medium down) {
+  .slick-next {
+    right: 10px;
+    border: 2px solid;
+    border-radius: 50%;
+  }
+  .slick-prev {
+    left: 10px;
+    border: 2px solid;
+    z-index: 10;
+    border-radius: 50%;
   }
 }

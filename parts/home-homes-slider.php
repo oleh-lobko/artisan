@@ -65,12 +65,14 @@ if ($homes_query->have_posts()) :
                 <?php endwhile; wp_reset_postdata(); ?>
 
             </div>
+            <div class="button-area">
 
             <?php if ($view_homes_link) : ?>
                 <a href="<?php echo esc_url($view_homes_link); ?>" class="view-homes-btn button">
                     <?php _e('View Homes', 'artisan'); ?>
                 </a>
             <?php endif; ?>
+            </div>
         </div>
     </section>
 <?php endif; ?>

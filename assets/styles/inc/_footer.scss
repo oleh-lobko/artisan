@@ -94,6 +94,9 @@
     border: 2px solid $color-links;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover {
+      opacity: 0.6;
+    }
     svg {
       width: 20px;
       height: 20px;

@@ -68,9 +68,16 @@
       text-transform: uppercase;
       font-weight: bold;
       margin-top: 6px;
+      &:hover {
+        opacity: 0.6;
+      }
     }
   }
-
+  .button-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .view-homes-btn {
     background-color: $home-bg;
     color: $color-white;
@@ -80,8 +87,14 @@
     padding: 1rem 3rem;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
     margin-top: 1.25rem;
     max-height: 4.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }

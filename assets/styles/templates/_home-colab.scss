@@ -40,9 +40,15 @@ $section-title-color: #9c6c39;
   }
 }
 @include breakpoint(small down) {
-  .logo-list {
-    .logo-item {
-      margin-bottom: 10px;
+  .collaborations-section {
+    .logo-list {
+      .logo-item {
+        .sponsor-logo {
+          margin-bottom: 20px;
+          width: 200px;
+          height: 100px;
+        }
+      }
     }
   }
 }

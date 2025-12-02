@@ -50,7 +50,9 @@ $phone_link = $phone_raw ? preg_replace('/[^+\d]+/', '', $phone_raw) : '';
 </div>
         <?php if ($footer_logo) : ?>
             <div class="footer-logo">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-link text-fallback">
                 <?php echo wp_get_attachment_image($footer_logo['id'], 'medium', false, ['class' => 'footer-logo-img']); ?>
+                </a>
             </div>
         <?php endif; ?>
 
